@@ -1,6 +1,8 @@
 # Basic-Data-Structures-Implmentation
 
-# Why study data structures?
+## Data structures
+
+## Why study data structures?
 
 
 ## References
