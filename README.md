@@ -12,3 +12,4 @@
 
 ### Implementation
 >[ How to define a template class in a .h file and implement it in a .cpp file  ](https://www.codeproject.com/Articles/48575/How-to-define-a-template-class-in-a-h-file-and-imp)
+>[ size vs capacity of a vector?  ](https://stackoverflow.com/questions/6296945/size-vs-capacity-of-a-vector)
