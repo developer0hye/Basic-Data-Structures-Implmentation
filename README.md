@@ -4,6 +4,11 @@
 
 ## Why study data structures?
 
+## Basic Data Structures
+1. Stack
+2. Queue
+3. Linked List
+4. Rooted Tree
 
 ## References
 
