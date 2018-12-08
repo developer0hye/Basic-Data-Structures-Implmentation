@@ -32,7 +32,7 @@ void Stack<T>::Pop()
 }
 
 template<class T>
-void Stack<T>::Push(T data)
+void Stack<T>::Push(T &data)
 {
     if (Empty())
         Init();
@@ -46,7 +46,7 @@ void Stack<T>::Push(T data)
 }
 
 template<class T>
-T Stack<T>::Top()
+T& Stack<T>::Top()
 {
     return buf_[top_];
 }

@@ -12,8 +12,8 @@ public:
     ~Stack();
 
     void        Pop();
-    void        Push(T data);
-    T           Top();
+    void        Push(T& data);
+    T&          Top();
 
     bool        Empty();
 
