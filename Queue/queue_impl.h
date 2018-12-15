@@ -15,7 +15,6 @@ public:
 private:
     T           data_;
     QueueNode*  next_;
-    QueueNode*  prev_;
 };
 
 template<class T>
