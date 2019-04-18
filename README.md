@@ -7,7 +7,7 @@
 ## Basic Data Structures
 1. Stack
 2. Queue
-3. Doubly Linked List
+3. Linked List
 4. Rooted Tree
 
 ## References
