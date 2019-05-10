@@ -10,7 +10,7 @@ int main()
 
     LinkedList<int> linkedList;
 
-    cout << "Initialization (data)" << endl << endl;
+    cout << "Test to add node at beginning(=head) (data)" << endl << endl;
 
     cout << "Add node at beginning (1)" << endl << endl;
     cout << "Add node at beginning (3)" << endl << endl;
@@ -25,7 +25,7 @@ int main()
     cout << "Size of linked list = " << linkedList.Size() << endl;
     cout << linkedList << endl;
 
-    cout << "Test Adding node in middle (position, data)" << endl << endl;
+    cout << "Test to add node in middle (position, data)" << endl << endl;
     cout << "Add node in middle (1, 2)" << endl << endl;
     cout << "Add node in middle (4, 5)" << endl << endl;
 
@@ -35,10 +35,24 @@ int main()
     cout << "Size of linked list = " << linkedList.Size() << endl;
     cout << linkedList << endl;
 
-    cout << "Test pop(position)" << endl << endl;
-    cout << "pop (0)" << endl << endl;
-    cout << "pop (3)" << endl << endl;
-    cout << "pop ()" << endl << endl;
+    cout << "Test Adding node at end (position, data)" << endl << endl;
+    cout << "Add node at end (15)" << endl << endl;
+    cout << "Add node at end (17)" << endl << endl;
+
+    linkedList.Push(linkedList.Size(), 15);
+    linkedList.Push(linkedList.Size(), 17);
+
+    cout << "Size of linked list = " << linkedList.Size() << endl;
+    cout << linkedList << endl;
+
+    cout << "Test to delte node (position)" << endl << endl;
+    cout << "Delete node at end" << endl << endl;
+    cout << "Delete node at beginning" << endl << endl;
+    cout << "Delete node in middle (3)" << endl << endl;
+    cout << "Delete node at beginning" << endl << endl;
+
+
+    linkedList.Pop(linkedList.Size()-1);
 
     linkedList.Pop(0);
     linkedList.Pop(3);

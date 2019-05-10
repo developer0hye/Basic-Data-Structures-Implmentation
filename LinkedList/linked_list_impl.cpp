@@ -152,8 +152,8 @@ bool LinkedList<T>::Pop(const int position)
         for(int count = 0; count < position - 1; count++)
             node = node->m_next_node;
 
-        delete node;
-        node = nullptr;
+        delete node->m_next_node;
+        node->m_next_node = nullptr;
     }
 
     m_length--;
