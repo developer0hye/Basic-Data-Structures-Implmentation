@@ -15,7 +15,7 @@ LinkedList<T>::~LinkedList()
 }
 
 template<typename T>
-T LinkedList<T>::Get(const int position) const
+T &LinkedList<T>::Get(const int position) const
 {
     if(position < 0 || position > m_length)
     {

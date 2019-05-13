@@ -61,6 +61,7 @@ int main()
     cout << "Size of linked list = " << linkedList.Size() << endl;
     cout << linkedList << endl;
 
+
     try {
         cout << "Test get and set function" << endl << endl;
 

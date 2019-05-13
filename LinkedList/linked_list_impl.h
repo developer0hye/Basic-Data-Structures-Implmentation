@@ -32,7 +32,7 @@ public:
     LinkedList();
     ~LinkedList();
 
-    T               Get(const int position) const;
+    T&              Get(const int position) const;
     bool			Set(const int position, const T& data);
     bool            Search(const T& data);
 
