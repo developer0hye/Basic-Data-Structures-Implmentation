@@ -1,4 +1,5 @@
 #include "linked_list_impl.h"
+#include <string>
 
 template<typename T>
 LinkedList<T>::LinkedList():
@@ -18,40 +19,37 @@ T LinkedList<T>::Get(const int position) const
 {
     if(position < 0 || position > m_length)
     {
-        return NULL;
+        std::string error_msg = "out of range: Indexed position is "
+                                + std::to_string(position)
+                                + ", but the length of list is " + std::to_string(m_length) + "." ;
+        throw std::out_of_range(error_msg);
     }
-    else
-    {
-        Node<T>* node = m_head;
-        for (int count = 0; count < position; count++)
-            node = node->m_next_node;
+    Node<T>* node = m_head;
+    for (int count = 0; count < position; count++)
+        node = node->m_next_node;
 
-        return node->m_data;
-    }
+    return node->m_data;
 }
 
 template<typename T>
 bool LinkedList<T>::Set(const int position, const T &data)
 {
     if(position < 0 || position > m_length)
-    {
         return false;
-    }
-    else
-    {
-        Node<T>* node = m_head;
-        for (int count = 0; count < position; count++)
-            node = node->m_next_node;
 
-        node->m_data = data;
-        return true;
-    }
+    Node<T>* node = m_head;
+    for (int count = 0; count < position; count++)
+        node = node->m_next_node;
+
+    node->m_data = data;
+    return true;
 }
 
 template<typename T>
 bool LinkedList<T>::Search(const T &data)
 {
-    if(m_head == nullptr) return false;
+    if(m_head == nullptr)
+        return false;
 
     Node<T>* node = m_head;
     do
@@ -75,7 +73,7 @@ bool LinkedList<T>::Push(const T &data) //Add node at beginning
 template<typename T>
 bool LinkedList<T>::Push(int position, const T &data)
 {
-    if(position > m_length)
+    if(position > m_length || position < 0)
     {
         return false;
     }
@@ -124,7 +122,7 @@ bool LinkedList<T>::Pop() //Delete first node
 template<typename T>
 bool LinkedList<T>::Pop(const int position)
 {
-    if(position >= m_length)
+    if(position >= m_length || position < 0)
     {
         return false;
     }

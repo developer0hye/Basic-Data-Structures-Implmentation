@@ -61,7 +61,7 @@ public:
 
             do
             {
-                os << "position: " << pos <<", data: " << node->m_data << std::endl;
+                os << "position: " << pos++ <<", data: " << node->m_data << std::endl;
                 node = node->m_next_node;
             }while(node != nullptr);
 

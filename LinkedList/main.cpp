@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-
+#include <vector>
 #include "linked_list.h"
 
 using namespace std;
@@ -61,14 +61,21 @@ int main()
     cout << "Size of linked list = " << linkedList.Size() << endl;
     cout << linkedList << endl;
 
-    cout << "Test get and set function" << endl << endl;
+    try {
+        cout << "Test get and set function" << endl << endl;
 
-    cout << "linkedList.get(1)  = " << linkedList.Get(1) << endl;
+        cout << "linkedList.get(1)  = " << linkedList.Get(1) << endl;
 
-    linkedList.Set(1, 50);
+        linkedList.Set(1, 50);
 
-    cout << "linkedList.set(1, 50)" << endl;
-    cout << "linkedList.get(1)  = " << linkedList.Get(1) << endl << endl;
+        cout << "linkedList.set(1, 50)" << endl;
+        cout << "linkedList.get(1)  = " << linkedList.Get(1) << endl << endl;
+
+        cout << "linkedList.get(50)  = " << linkedList.Get(50) << endl << endl;
+    } catch (std::out_of_range& e) {
+        cout << e.what() << endl << endl;
+    }
+
 
     cout << "Test search function Search(data) (return value, 0: not exists, 1: exists)" << endl << endl;
 
