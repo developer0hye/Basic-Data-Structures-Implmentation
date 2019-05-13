@@ -10,6 +10,10 @@
 3. Linked List
 4. Rooted Tree
 
+## To do Lists
+1. Double Linkd List
+2. Tree
+
 ## References
 
 ### Theory
