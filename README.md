@@ -8,6 +8,8 @@
 1. Stack
 2. Queue
 3. Linked List
+-only head
+-using tail
 4. Rooted Tree
 
 ## To do Lists
