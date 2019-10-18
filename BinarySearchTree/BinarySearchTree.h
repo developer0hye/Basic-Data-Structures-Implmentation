@@ -151,9 +151,9 @@ public:
 		if (node_to_be_deleted->m_left != NULL &&
 			node_to_be_deleted->m_right != NULL)
 		{
-			//q Á¦°Å µÉ ³ëµåÀÇ ºÎ¸ð
-			//node_to_be_deleted Á¦°Å µÉ ³ëµå
-			//node_to_be_changed ¹Ù²ð ³ëµå
+			//q ì œê±° ë  ë…¸ë“œì˜ ë¶€ëª¨
+			//node_to_be_deleted ì œê±° ë  ë…¸ë“œ
+			//node_to_be_changed ë°”ë€” ë…¸ë“œ
 
 			TreeNode* prevprev = node_to_be_deleted;
 			TreeNode* prev = node_to_be_deleted->m_left;
@@ -163,18 +163,14 @@ public:
 				prevprev = prev;
 				prev = prev->m_right;
 			}
-
+			
 			node_to_be_deleted->m_data = prev->m_data;
-			if (prevprev == node_to_be_deleted)
-			{
-				prevprev->m_left = prev->m_left;
-			}
+			if (node_to_be_deleted == prevprev)
+				node_to_be_deleted->m_left = prev->m_left;
 			else
-			{
-				prevprev->m_left = prev->m_right;
-			}
-			delete prev;
+				prevprev->m_right = prev->m_left;
 
+			delete prev;
 		}
 		//*****************************
 
