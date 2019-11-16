@@ -11,10 +11,10 @@
 -only head
 -using tail
 4. Rooted Tree
-
+-Binary Search Tree
+-[AVLTree](https://github.com/developer0hye/AVLTree-CPP/blob/master/avltree.cpp)
 ## To do Lists
-1. Double Linkd List
-2. Tree
+red-black
 
 ## References
 
